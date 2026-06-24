@@ -1,0 +1,29 @@
+<h1>Lista de Usuários</h1>
+
+<a href="/usuarios/cadastrar">
+    Cadastrar Usuário
+</a>
+
+<hr>
+
+<li>
+    Nome: {{this.nome}}
+    <br>
+
+    E-mail: {{this.email}}
+    <br>
+
+    Idade: {{this.idade}}
+
+    <form action="/usuarios/{{this.id}}?_method=DELETE"
+          method="POST"
+          style="display:inline;">
+
+        <button type="submit">
+            Excluir
+        </button>
+
+    </form>
+</li>
+
+<br>
