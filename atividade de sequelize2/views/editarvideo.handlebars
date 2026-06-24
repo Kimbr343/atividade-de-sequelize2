@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Vídeo</title>
+</head>
+<body>
+
+    <h1>Editar Vídeo</h1>
+
+    <form action="/videos/editar/{{video.id}}" method="POST">
+
+        <label>Título:</label>
+        <input type="text" name="titulo" value="{{video.titulo}}" required>
+
+        <br><br>
+
+        <label>Criador:</label>
+        <input type="text" name="criador" value="{{video.criador}}" required>
+
+        <br><br>
+
+        <label>Descrição:</label>
+        <input type="text" name="descricao" value="{{video.descricao}}" required>
+
+        <br><br>
+
+        <label>Hashtag:</label>
+        <input type="text" name="hashtag" value="{{video.hashtag}}">
+
+        <br><br>
+
+        <label>URL do vídeo:</label>
+        <input type="text" name="urlVideo" value="{{video.urlVideo}}" required>
+
+        <br><br>
+
+        <label>Thumbnail:</label>
+        <input type="text" name="thumbnail" value="{{video.thumbnail}}">
+
+        <br><br>
+
+        <label>Visualizações:</label>
+        <input type="number" name="visualizacoes" value="{{video.visualizacoes}}">
+
+        <br><br>
+
+        <label>Curtidas:</label>
+        <input type="number" name="curtidas" value="{{video.curtidas}}">
+
+        <br><br>
+
+        <button type="submit">Atualizar</button>
+
+    </form>
+
+    <br>
+
+    <a href="/videos">Voltar</a>
+
+</body>
+</html>
