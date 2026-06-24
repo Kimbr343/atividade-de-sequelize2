@@ -142,6 +142,27 @@ app.post("/usuarios", async (req, res) => {
 
 });
 
+app.post('/usuarios/deletar/:id', async (req, res) => {
+    const { id } = req.params;
+
+    const usuario = await Usuario.findByPk(id);
+
+    if (usuario) {
+        await usuario.destroy();
+    }
+
+    res.redirect('/usuarios');
+});
+
+async function conectarBD() {
+    try {   
+        await sequelize.sync();
+        console.log('Conexão com o banco estabelecida!');
+    } catch (erro) {
+        console.error(erro);
+    }
+}
+
 conectarBanco();
 
 app.listen(3000, () => {
