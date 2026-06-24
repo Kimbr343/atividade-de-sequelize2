@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Novo Vídeo</title>
+</head>
+<body>
+
+    <h1>Criar novo vídeo</h1>
+
+    <form action="/videos" method="POST">
+
+        <label>Título:</label>
+        <input type="text" name="titulo" required>
+
+        <br><br>
+
+        <label>Criador:</label>
+        <input type="text" name="criador" required>
+
+        <br><br>
+
+        <label>Descrição:</label>
+        <input type="text" name="descricao" required>
+
+        <br><br>
+
+        <label>Hashtag:</label>
+        <input type="text" name="hashtag">
+
+        <br><br>
+
+        <label>URL do vídeo:</label>
+        <input type="text" name="urlVideo" required>
+
+        <br><br>
+
+        <label>Thumbnail (imagem):</label>
+        <input type="text" name="thumbnail">
+
+        <br><br>
+
+        <label>Visualizações:</label>
+        <input type="number" name="visualizacoes" value="0">
+
+        <br><br>
+
+        <label>Curtidas:</label>
+        <input type="number" name="curtidas" value="0">
+
+        <br><br>
+
+        <button type="submit">Salvar</button>
+
+    </form>
+
+    <br>
+
+    <a href="/videos">Voltar</a>
+
+</body>
+</html> 
